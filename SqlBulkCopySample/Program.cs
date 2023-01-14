@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
+using System.Diagnostics;
 
 namespace SqlBulkCopySample
 {
@@ -12,6 +14,8 @@ namespace SqlBulkCopySample
     {
         static void Main(string[] args)
         {
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
             DataTable dtable = new DataTable();
             dtable.Columns.Add("Id", typeof(int));
             dtable.Columns.Add("Name", typeof(string));
@@ -22,7 +26,8 @@ namespace SqlBulkCopySample
                 dtable.Rows.Add(null, item.Name, item.Description);
             }
             var statu = BulkCopy(dtable);
-            Console.WriteLine(statu);
+            watch.Stop();
+            Console.WriteLine(statu + "\n" + "Milliseconds: " + watch.Elapsed.Milliseconds);         
             Console.ReadLine();
         }
         public static string BulkCopy(DataTable dtable)
@@ -40,7 +45,6 @@ namespace SqlBulkCopySample
 
                     // Load the data to the database
                     bulkCopy.WriteToServer(dtable);
-
                     // Close up          
                     bulkCopy.Close();
                 }
@@ -50,7 +54,7 @@ namespace SqlBulkCopySample
         public static List<SampleEntity> Samples()
         {
             var samples = new  List<SampleEntity>();
-            for (int i = 1; i < 10000; i++)
+            for (int i = 1; i < 100000; i++)
             {
                 var sample = new SampleEntity();
                 sample.Name=i.ToString();
