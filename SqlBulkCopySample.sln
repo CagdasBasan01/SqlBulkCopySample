@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBulkCopySample", "SqlBulkCopySample\SqlBulkCopySample.csproj", "{97B0B601-B5F6-4EF6-8D5D-039C69969C89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97B0B601-B5F6-4EF6-8D5D-039C69969C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B0B601-B5F6-4EF6-8D5D-039C69969C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B0B601-B5F6-4EF6-8D5D-039C69969C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B0B601-B5F6-4EF6-8D5D-039C69969C89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E64D321-448B-4231-9E55-1EC435A7D915}
+	EndGlobalSection
+EndGlobal
